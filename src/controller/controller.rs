@@ -11,6 +11,9 @@ pub struct Controller {
     c_struct: ws2811_t,
 }
 
+unsafe impl Send for Controller {}
+unsafe impl Sync for Controller {}
+
 impl Controller {
     /// Creates a new Controller
     ///
